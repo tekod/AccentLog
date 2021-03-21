@@ -14,12 +14,11 @@ use Accent\Log\Log;
 
 
 /**
- * Classic file storage writer, similar to Apache's access log.
+ * Enhanced version of "File" log writer.
  *
- * Bahivor of 'ClearOnStart' options:
- *  - false: - new records will be append to existing file
- *           - header will be repeated to divide previous and current HTTP requests
- *  - true: - file will be rewrited with header (only) on beginning of each request
+ * Instead of deleting the most oldest entries this writer will "rotate" log file,
+ * just like Linux log-rotate system works:
+ * exiting log file will be renamed and preserved and new empty log file created.
  */
 class FileRotatedLogWriter extends FileLogWriter  {
 

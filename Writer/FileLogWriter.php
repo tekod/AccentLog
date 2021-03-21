@@ -124,7 +124,7 @@ class FileLogWriter extends BaseLogWriter  {
      */
     protected function ResizeFile() {
 
-        $FileSize = filesize($this->Path);
+        $FileSize= filesize($this->Path);
         $SizeLimit= intval($this->GetOption('SizeLimit'));
 
         // skip if limit is not exeeded

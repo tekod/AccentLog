@@ -1,6 +1,6 @@
 {
     "name": "tekod/accent-log",
-    "description": "AccentPHP-Log package.",
+    "description": "Advanced services for common logging operations",
     "keywords": [
         "accent", "accentphp", "log", "journal"
     ],
