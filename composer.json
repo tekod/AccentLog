@@ -1,0 +1,23 @@
+{
+    "name": "tekod/accent-log",
+    "description": "AccentPHP-Log package.",
+    "keywords": [
+        "accent", "accentphp", "log", "journal"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://gitlab.com/tekod/AccentPHP",
+    "authors": [{
+        "name": "miroslav curcic",
+        "email": "office@tekod.com",
+        "homepage": "https://www.tekod.com"
+    }],
+    "require": {
+        "php": ">=7.0.0"
+    },   
+    "autoload": {
+       "psr-4": {		
+            "Accent\\Log\\": ""
+        }
+    }    
+}

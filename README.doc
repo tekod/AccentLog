@@ -1,0 +1,48 @@
+Accent "Log" package
+====================
+
+This package contains services for common logging operations.
+
+
+Log service
+====================
+
+This service provides mechanisms for logging (acquisation and storing)
+arbitrary informations for later analysing.
+
+Multiple "writers" can be attached in logging process to make flexibile
+handling of messages with different importances.
+Package contains these built-in writers:
+ - ErrorLog    - will send messages into oprating system's log files using error_log() function
+ - File        - will append message into file
+ - FileRotated - similar to "File" but with "log-rotate" capablity
+ - Mail        - will send message via email
+ - DB          - will store mesage into database table
+ - ZendMonitor - will forwarding message to Zend's function zend_monitor_custom_event()
+
+There are 8 levels of importance for log messages. "Minimum level" can be specified for any writer 
+so developer can, for example, to send all messages into file but only critical ones to email.
+
+Most writers has option "Buffered" to switch to buffered mode - instead of storing message 
+immediately it will wait for end of execution to store all of them in single operation.
+
+Purpose of acquisitors is to attach additional data to each message on-fly.
+Package contains these built-in acquisitors:
+ - BackTrace    - will append back-trace info to log message
+ - Memory       - will append amount of memory usage to log message
+ - Request      - will append the most important fields from HTTP request to message
+
+
+
+Journal service
+====================
+
+"Journal" is classic journalized logger service. 
+
+It uses "File" log writer and contains 3 levels of severity: MAJOR, INFO and DEBUG,
+so it will create 3 log files per service.
+
+Journal service stores only messages, no additional data is stored.
+
+
+
