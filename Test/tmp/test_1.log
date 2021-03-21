@@ -1,8 +1,0 @@
-
-
-My logger
-( timestamp: CET= "Sun, 21 Mar 19:51:05", UTC= "Sun, 21 Mar 18:51:05" )
-[2021-03-21 19:51:05] My logger.NOTICE: BBB []
-[2021-03-21 19:51:05] My logger.WARNING: CCC []
-[2021-03-21 19:51:05] My logger.ERROR: DDD []
-[2021-03-21 19:51:05] My logger.EMERGENCY: EEE []
