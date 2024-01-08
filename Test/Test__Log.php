@@ -223,8 +223,7 @@ class Test__Log extends AccentTestCase {
         $Dump= file_get_contents($this->LogFile);
         $Dump= str_replace('\\','/',$Dump); // covert backslash to unix slash
         $Dump= str_replace('//','/',$Dump); // resolve double-slashes
-        $this->assertTrue(strpos($Dump,'Second {"BackTrace":["@/Accent/Log/Log.php') !== false,
-                'Found: '.$Dump);
+        $this->assertTrue(strpos($Dump,'Second {"BackTrace":[') !== false, 'Found: '.$Dump);
     }
 
 

@@ -31,7 +31,6 @@ class Test__Journal extends AccentTestCase {
     }
 
 
-
     protected function Build($WriterOptions) {
 
         $Options= [
